@@ -1,0 +1,27 @@
+:root {
+  /* Light Theme Colors */
+  --primary-color: #ffb400;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --nav-text: #333333;
+  --section-bg: #ffffff;
+  --card-bg: #ffffff;
+  --border-color: #eaeaea;
+  --subtitle-color: #666666;
+  --timeline-border: #dddddd;
+  
+  /* Common Colors */
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --nav-text: #ffffff;
+  --section-bg: #1a1a1a;
+  --card-bg: #2d2d2d;
+  --border-color: #404040;
+  --subtitle-color: #cccccc;
+  --timeline-border: #404040;
+}

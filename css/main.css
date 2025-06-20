@@ -90,6 +90,20 @@ img {
   cursor: pointer;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--text-color);
+}
 
 
 /*  Icon css */
@@ -138,6 +152,9 @@ img {
   box-shadow: 0 4px 16px rgba(255,180,0,0.13);
 }
 
+.contact-email-note i {
+  margin-right: 0.5rem;
+}
 
 @media (max-width: 1100px) {
   .hero {
@@ -1240,7 +1257,106 @@ body * {
   text-decoration: underline;
   font-weight: 500;
 }
-.contact-email-note i {
-  margin-right: 0.5rem;
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 70px; /* Height of the navbar */
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .nav-links li:hover {
+    background-color: var(--section-bg);
+  }
+
+  #theme-toggle {
+    margin: 10px auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .social-icons {
+    flex-direction: row;
+    left: 50%;
+    top: auto;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    background-color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
 }
 
